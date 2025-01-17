@@ -70,3 +70,13 @@
   top: calc(100vh - 100px);
   left: calc(50vw - 100px);
 }
+.scrollbar {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  width: 100%;
+  background-color: #f3fdfe;
+}
+.scrollbar::-webkit-scrollbar {
+  display: none; /* Hide the scrollbar */
+}
