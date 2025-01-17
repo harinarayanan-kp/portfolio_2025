@@ -1,6 +1,7 @@
 import Image from "next/image";
 import HomeSection from "./Home";
 import styles from "./custom.module.css";
+import AboutSection from "./AboutSection";
 
 export default function Home() {
   return (
@@ -14,9 +15,7 @@ export default function Home() {
         height={200}
         className={styles.rotatingImage}
       />
-      <div
-        style={{ backgroundColor: "red", height: "100vh", width: "100%" }}
-      ></div>
+      <AboutSection />
     </div>
   );
 }
