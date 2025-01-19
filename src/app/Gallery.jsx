@@ -2,6 +2,9 @@ import React from "react";
 import styles from "./custom.module.css";
 
 const Gallery = () => {
+  const images = [
+    
+  ]
   return (
     <div
       style={{
