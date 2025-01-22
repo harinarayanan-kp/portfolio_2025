@@ -14,6 +14,7 @@ const Gallery = () => {
     // Add more video URLs here
   ];
 
+  
   const [muted, setMuted] = useState(Array(motionGraphicsVideos.length).fill(true));
 
   const handleMouseEnter = (index) => {
