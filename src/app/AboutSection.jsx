@@ -47,8 +47,19 @@ const AboutSection = () => {
               width: "160px",
               height: "220px",
               border: "3px solid",
+              display: "flex",
+              justifyContent: "center",
+              overflow: "hidden",
             }}
-          ></div>
+          >
+            <img
+            style={{
+              height: "100%",
+            }}
+              src="https://img.playbook.com/gvN2B1m4hTLOJqKIj57tn_ld8F1LnSEacDG7kf8KC5I/w:4000/Z3M6Ly9icmFuZGlm/eS11c2VyY29udGVu/dC1kZXYvcHJvZC9s/YXJnZV9wcmV2aWV3/cy9iODYzNWQyOS1j/YzIwLTRmYmItODVm/Mi05ZjZlNjhjNDM5/NzI.webp"
+              alt="pfp"
+            />
+          </div>
           <svg
             width="200"
             height="261.5"
