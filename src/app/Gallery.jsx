@@ -4,7 +4,9 @@ import styles from "./custom.module.css";
 
 const Gallery = () => {
   const graphicdesign = [
-    "https://www.playbook.com/s/creativehari/qPcKLRB8a7mwzG4YSPLtK1pe?assetToken=asVpMH9wGWKCtuYfkcX3dMap",
+    "/graphicdesign/gd1.png",
+    "/graphicdesign/gd2.png",
+    "/graphicdesign/gd3.png",
     // Add more image URLs here
   ];
 
