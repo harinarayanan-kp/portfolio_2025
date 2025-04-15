@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import HomeSection from "./Home";
 import styles from "./custom.module.css";
 import AboutSection from "./AboutSection";
