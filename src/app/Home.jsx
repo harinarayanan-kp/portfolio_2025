@@ -13,8 +13,8 @@ const HomeSection = () => {
         style={{
           objectFit: "cover",
           maxWidth: "100%",
-          height: "auto"
-        }} />
+        }}
+      />
       <div
         style={{
           userSelect: "none",
@@ -41,21 +41,15 @@ const HomeSection = () => {
             alt="screw"
             width={40}
             height={40}
-            style={{
-              objectFit: "cover",
-              maxWidth: "100%",
-              height: "auto"
-            }} />
+            style={{ objectFit: "cover" }}
+          />
           <Image
             src="/screw.png"
             alt="screw"
             width={40}
             height={40}
-            style={{
-              objectFit: "cover",
-              maxWidth: "100%",
-              height: "auto"
-            }} />
+            style={{ objectFit: "cover" }}
+          />
         </div>
         <div
           style={{
@@ -70,21 +64,15 @@ const HomeSection = () => {
             alt="screw"
             width={40}
             height={40}
-            style={{
-              objectFit: "cover",
-              maxWidth: "100%",
-              height: "auto"
-            }} />
+            style={{ objectFit: "cover" }}
+          />
           <Image
             src="/screw.png"
             alt="screw"
             width={40}
             height={40}
-            style={{
-              objectFit: "cover",
-              maxWidth: "100%",
-              height: "auto"
-            }} />
+            style={{ objectFit: "cover" }}
+          />
         </div>
       </div>
       <Image
@@ -95,8 +83,9 @@ const HomeSection = () => {
         className={styles.anchor}
         style={{
           maxWidth: "100%",
-          height: "auto"
-        }} />
+          height: "auto",
+        }}
+      />
       <div
         style={{
           display: "flex",
@@ -157,8 +146,9 @@ const HomeSection = () => {
           priority
           style={{
             maxWidth: "100%",
-            height: "auto"
-          }} />
+            height: "auto",
+          }}
+        />
       </div>
     </div>
   );

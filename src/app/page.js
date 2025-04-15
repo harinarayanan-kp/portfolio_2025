@@ -56,6 +56,7 @@ export default function Home() {
         height={200}
         className={styles.rotatingImage}
         unoptimized
+        priority
         draggable={false}
         style={{
           maxWidth: "100%",
@@ -63,6 +64,7 @@ export default function Home() {
           objectFit: "cover"
         }} />
       <AboutSection />
+
       <Gallery />
       <span
         style={{
