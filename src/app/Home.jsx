@@ -4,13 +4,13 @@ import Image from "next/image";
 
 const HomeSection = () => {
   return (
-    <div className={styles.section}>
+    <div className={styles.section} style={{ position: "relative" }}>
       <Image
         src="/wall_bg.png"
         alt="background"
         className={styles.bg_image}
-        layout="fill"
-        objectFit="cover"
+        fill
+        style={{ objectFit: "cover" }}
       />
       <div
         style={{
@@ -38,14 +38,14 @@ const HomeSection = () => {
             alt="screw"
             width={40}
             height={40}
-            objectFit="cover"
+            style={{ objectFit: "cover" }}
           />
           <Image
             src="/screw.png"
             alt="screw"
             width={40}
             height={40}
-            objectFit="cover"
+            style={{ objectFit: "cover" }}
           />
         </div>
         <div
@@ -61,14 +61,14 @@ const HomeSection = () => {
             alt="screw"
             width={40}
             height={40}
-            objectFit="cover"
+            style={{ objectFit: "cover" }}
           />
           <Image
             src="/screw.png"
             alt="screw"
             width={40}
             height={40}
-            objectFit="cover"
+            style={{ objectFit: "cover" }}
           />
         </div>
       </div>
@@ -108,7 +108,7 @@ const HomeSection = () => {
               pointerEvents: "none",
               top: 0,
               left: 0,
-              objectFit: "contain", // Ensures the entire image is visible within the container
+              objectFit: "contain",
             }}
             src="/haris.png"
             alt="Hari's"
@@ -136,6 +136,7 @@ const HomeSection = () => {
           width={500}
           height={500}
           className={styles.title}
+          priority
         />
       </div>
     </div>
