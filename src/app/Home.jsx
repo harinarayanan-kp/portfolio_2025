@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./custom.module.css";
-import Image from "next/legacy/image";
+import Image from "next/image";
 
 const HomeSection = () => {
   return (
@@ -10,8 +10,11 @@ const HomeSection = () => {
         alt="background"
         className={styles.bg_image}
         fill
-        style={{ objectFit: "cover" }}
-      />
+        style={{
+          objectFit: "cover",
+          maxWidth: "100%",
+          height: "auto"
+        }} />
       <div
         style={{
           userSelect: "none",
@@ -38,15 +41,21 @@ const HomeSection = () => {
             alt="screw"
             width={40}
             height={40}
-            style={{ objectFit: "cover" }}
-          />
+            style={{
+              objectFit: "cover",
+              maxWidth: "100%",
+              height: "auto"
+            }} />
           <Image
             src="/screw.png"
             alt="screw"
             width={40}
             height={40}
-            style={{ objectFit: "cover" }}
-          />
+            style={{
+              objectFit: "cover",
+              maxWidth: "100%",
+              height: "auto"
+            }} />
         </div>
         <div
           style={{
@@ -61,15 +70,21 @@ const HomeSection = () => {
             alt="screw"
             width={40}
             height={40}
-            style={{ objectFit: "cover" }}
-          />
+            style={{
+              objectFit: "cover",
+              maxWidth: "100%",
+              height: "auto"
+            }} />
           <Image
             src="/screw.png"
             alt="screw"
             width={40}
             height={40}
-            style={{ objectFit: "cover" }}
-          />
+            style={{
+              objectFit: "cover",
+              maxWidth: "100%",
+              height: "auto"
+            }} />
         </div>
       </div>
       <Image
@@ -78,7 +93,10 @@ const HomeSection = () => {
         width={500}
         height={500}
         className={styles.anchor}
-      />
+        style={{
+          maxWidth: "100%",
+          height: "auto"
+        }} />
       <div
         style={{
           display: "flex",
@@ -137,7 +155,10 @@ const HomeSection = () => {
           height={500}
           className={styles.title}
           priority
-        />
+          style={{
+            maxWidth: "100%",
+            height: "auto"
+          }} />
       </div>
     </div>
   );
