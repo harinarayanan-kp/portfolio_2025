@@ -5,6 +5,9 @@ const AboutSection = () => {
   return (
     <div
       style={{
+        backgroundImage:
+          "radial-gradient(circle,rgb(147, 147, 147) 1px, transparent 1px)",
+        backgroundSize: "30px 30px",
         minHeight: "100vh",
         backgroundColor: "#F3FDFE",
         display: "flex",
@@ -53,11 +56,24 @@ const AboutSection = () => {
             }}
           >
             <img
-            style={{
-              height: "100%",
-            }}
-              src="https://img.playbook.com/gvN2B1m4hTLOJqKIj57tn_ld8F1LnSEacDG7kf8KC5I/w:4000/Z3M6Ly9icmFuZGlm/eS11c2VyY29udGVu/dC1kZXYvcHJvZC9s/YXJnZV9wcmV2aWV3/cy9iODYzNWQyOS1j/YzIwLTRmYmItODVm/Mi05ZjZlNjhjNDM5/NzI.webp"
+              style={{
+                height: "100%",
+                mixBlendMode: "multiply",
+              }}
+              draggable={false}
+              src="pfp2.jpg"
               alt="pfp"
+            />
+            <img
+              style={{
+                position: "absolute",
+                mixBlendMode: "darken",
+                width: "50%",
+                transform: "translate(-15%, -5%) rotate(-5deg)",
+              }}
+              draggable={false}
+              src="horn.jpeg"
+              alt=""
             />
           </div>
           <svg

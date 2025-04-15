@@ -9,10 +9,16 @@ const Gallery = () => {
     "/graphicdesign/gd3.png",
     // Add more image URLs here
   ];
+  const photographs = [
+    "/graphicdesign/gd1.png",
+    "/graphicdesign/gd2.png",
+    "/graphicdesign/gd3.png",
+    // Add more image URLs here
+  ];
 
   const motionGraphicsVideos = [
-    "https://www.example.com/video1.mp4",
-    "https://www.example.com/video2.mp4",
+    // "https://www.example.com/video1.mp4",
+    // "https://www.example.com/video2.mp4",
     // Add more video URLs here
   ];
 
@@ -67,11 +73,12 @@ const Gallery = () => {
           justifyContent: "space-between",
           paddingLeft: "20px",
           paddingRight: "20px",
+          fontSize: "2rem",
         }}
       >
         Graphic Design
         <a
-          href="/"
+          href="/graphic-design"
           style={{
             fontSize: "2rem",
             borderRadius: "10px",
@@ -80,6 +87,7 @@ const Gallery = () => {
             justifyContent: "center",
             alignItems: "center",
             padding: "5px 20px",
+            fontSize: "2rem",
           }}
         >
           view more
@@ -92,8 +100,8 @@ const Gallery = () => {
             src={imageUrl}
             alt={`Graphic Design ${index + 1}`}
             style={{
-              height: 150,
-              width: 150,
+              height: 200,
+              width: 200,
               backgroundColor: "red",
               margin: 10,
               flexShrink: 0,
@@ -166,6 +174,49 @@ const Gallery = () => {
               {muted[index] ? "Unmute" : "Mute"}
             </button>
           </div>
+        ))}
+      </div>
+
+      <div
+        style={{
+          display: "flex",
+          width: "100%",
+          justifyContent: "space-between",
+          paddingLeft: "20px",
+          paddingRight: "20px",
+          marginTop: "20px",
+        }}
+      >
+        Photography
+        <a
+          href="/photography"
+          style={{
+            fontSize: "2rem",
+            borderRadius: "10px",
+            backgroundColor: "pink",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            padding: "5px 20px",
+          }}
+        >
+          view more
+        </a>
+      </div>
+      <div className={styles.scrollbar} style={{ display: "flex", overflowX: "auto" }}>
+        {photographs.map((photoUrl, index) => (
+          <img
+            key={index}
+            src={photoUrl}
+            alt={`Photography ${index + 1}`}
+            style={{
+              height: 200,
+              width: 200,
+              backgroundColor: "blue",
+              margin: 10,
+              flexShrink: 0,
+            }}
+          />
         ))}
       </div>
     </div>

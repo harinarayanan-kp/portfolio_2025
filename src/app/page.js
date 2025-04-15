@@ -15,6 +15,8 @@ export default function Home() {
         width={200}
         height={200}
         className={styles.rotatingImage}
+        unoptimized
+        draggable={false}
       />
       <AboutSection />
       <Gallery />
