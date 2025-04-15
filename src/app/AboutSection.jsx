@@ -64,7 +64,7 @@ const AboutSection = () => {
               src="pfp2.jpg"
               alt="pfp"
             />
-            <img
+            {/* <img
               style={{
                 position: "absolute",
                 mixBlendMode: "darken",
@@ -74,7 +74,7 @@ const AboutSection = () => {
               draggable={false}
               src="horn.jpeg"
               alt=""
-            />
+            /> */}
           </div>
           <svg
             width="200"

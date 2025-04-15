@@ -64,7 +64,8 @@ const Gallery = () => {
           marginBottom: "20px",
         }}
       >
-        Look at His works
+        {/* Look at His works */}
+        AHMM.. THIS WEB PAGE IS UNDER CONSTRUCTION
       </span>
       <div
         style={{
