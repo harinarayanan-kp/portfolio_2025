@@ -5,21 +5,27 @@ import HomeSection from "./Home";
 import styles from "./custom.module.css";
 import AboutSection from "./AboutSection";
 import Gallery from "./Gallery";
+import ProjectsSection from "./ProjectsSection";
+import SkillsSection from "./SkillsSection";
+import LoadingCaptcha from "./LoadingCaptcha";
+import ResumeConsole from "./ResumeConsole";
+import ContactSection from "./ContactSection";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
+  const [captchaSolved, setCaptchaSolved] = useState(false);
+  const [hasMounted, setHasMounted] = useState(false);
 
   useEffect(() => {
+    setHasMounted(true);
+
     const loadAssets = async () => {
       try {
         const font = new FontFace("Canda Tawa", "url(/canda_tawa.ttf)");
         await font.load();
         document.fonts.add(font);
 
-        const imagePromises = [
-          "/chakra.png",
-          "/pfp2.jpg"
-        ].map((src) => {
+        const imagePromises = ["/chakra.png", "/pfp2.jpg"].map((src) => {
           return new Promise((resolve, reject) => {
             const img = new window.Image();
             img.src = src;
@@ -38,11 +44,17 @@ export default function Home() {
     loadAssets();
   }, []);
 
-  if (isLoading) {
+  if (!hasMounted) {
+    // Prevent any rendering until after hydration
+    return null;
+  }
+
+  if (isLoading || !captchaSolved) {
     return (
-      <div className={styles.loader}>
-        <p>Loading...</p>
-      </div>
+      <LoadingCaptcha
+        onSolved={() => setCaptchaSolved(true)}
+        solved={captchaSolved}
+      />
     );
   }
 
@@ -61,12 +73,16 @@ export default function Home() {
         style={{
           maxWidth: "100%",
           height: "auto",
-          objectFit: "cover"
-        }} />
+          objectFit: "cover",
+        }}
+      />
       <AboutSection />
-
-      <Gallery />
-      <span
+      <ProjectsSection />
+      <ResumeConsole />
+      <SkillsSection />
+      <ContactSection />
+      {/* <Gallery /> */}
+      {/* <span
         style={{
           textDecoration: "underline",
           textDecorationStyle: "wavy",
@@ -76,7 +92,7 @@ export default function Home() {
         }}
       >
         Cool Right?
-      </span>
+      </span> */}
     </div>
   );
 }

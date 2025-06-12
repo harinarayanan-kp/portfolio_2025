@@ -1,0 +1,134 @@
+.skillsSection {
+  background: #e3f0ff;
+  padding: 48px 0 40px 0;
+  width: 100%;
+  border-top: 3px solid #111;
+  border-bottom: 3px solid #111;
+}
+
+.skillsTitle {
+  text-align: center;
+  font-size: 3rem;
+  font-family: "Canda Tawa", monospace, sans-serif;
+  color: #111;
+  margin-bottom: 32px;
+  text-decoration: underline;
+  text-decoration-style: wavy;
+  user-select: none;
+}
+
+.skillsGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+  justify-content: center;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 8px;
+}
+
+.skillCard {
+  background: #fff;
+  border: 2.5px solid #111;
+  box-shadow: 4px 4px 0px #111;
+  border-radius: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 18px 22px 12px 22px;
+  min-width: 110px;
+  min-height: 130px;
+  max-width: 110px;
+  max-height: 130px;
+  width: 110px;
+  height: 130px;
+  transition: box-shadow 0.15s, background 0.15s;
+}
+
+.skillCard:hover,
+.skillCard:focus {
+  background: #b6d6ff;
+  box-shadow: 0 0 0 #111;
+}
+
+.skillIcon {
+  width: 38px;
+  height: 38px;
+  margin-bottom: 10px;
+  object-fit: contain;
+  display: block;
+  user-select: none;
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+
+.skillName {
+  font-family: monospace;
+  font-size: 1.08rem;
+  color: #111;
+  font-weight: 600;
+  text-align: center;
+  user-select: none;
+}
+
+.creativeTitle {
+  text-align: center;
+  font-size: 3rem;
+  font-family: "Canda Tawa", monospace, sans-serif;
+  color: #111;
+  margin: 38px 0 22px 0;
+  text-decoration: underline;
+  text-decoration-style: dashed;
+  letter-spacing: 1px;
+  user-select: none;
+}
+
+@media (max-width: 600px) {
+  .skillsGrid {
+    gap: 6px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    justify-items: center;
+    max-width: 100vw;
+    padding: 16px;
+  }
+  .skillCard {
+    min-width: 80px;
+    min-height: 90px;
+    max-width: 80px;
+    max-height: 90px;
+    width: 80px;
+    height: 90px;
+    padding: 12px 8px 8px 8px;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+  .skillIcon {
+    width: 28px;
+    height: 28px;
+    margin-bottom: 6px;
+  }
+  .skillName {
+    font-size: 0.85rem;
+    line-height: 1.1;
+    word-break: break-word;
+    text-align: center;
+    max-width: 74px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    display: block;
+  }
+  .skillsSection {
+    padding: 20px 0 12px 0;
+  }
+  .skillsTitle {
+    font-size: 2rem;
+    margin-bottom: 12px;
+  }
+  .creativeTitle {
+    font-size: 2rem;
+    margin: 16px 0 10px 0;
+  }
+}
