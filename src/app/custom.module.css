@@ -82,7 +82,10 @@
 
 .resumeConsoleWrap {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+  justify-items: center;
   margin: 36px 0 24px 0;
 }
 

@@ -1,7 +1,80 @@
 import React, { useState } from "react";
 import styles from "./custom.module.css";
+import ThreeBox from "./three/ThreeBox";
 
-const ResumeConsole = () => {
+function Monitor() {
+  return (
+    <div
+      style={{
+        position: "relative",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        paddingBottom: 0,
+      }}
+    >
+      <div
+        style={{
+          width: "min(60vw, 120px)",
+          height: 18,
+          background: "#23272b",
+          borderRadius: "16px 16px 0 0",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          position: "relative",
+        }}
+      >
+        <div
+          style={{
+            width: 10,
+            height: 10,
+            background: "#6ec1ff",
+            borderRadius: "50%",
+            marginTop: 2,
+            opacity: 0.7,
+            boxShadow: "0 0 8px #6ec1ff88",
+          }}
+        />
+      </div>
+      <div
+        style={{
+          background: "#111417",
+          borderRadius: "12px 12px 10px 10px",
+          overflow: "hidden",
+          border: "10px solid #23272b",
+          borderBottomWidth: 20,
+        }}
+      >
+        <ThreeBox />
+      </div>
+    </div>
+  );
+}
+
+function ConsoleSection({ handleDownload, downloading, consoleText }) {
+  const stylesObj = {
+    color: "#6ec1ff",
+  };
+  return (
+    <>
+      <div className={styles.consoleBody}>
+        <span style={stylesObj}>&gt; </span>
+        <button
+          className={styles.consoleBtn}
+          onClick={handleDownload}
+          disabled={downloading}
+        >
+          download_resume()
+        </button>
+        <span className={styles.consoleCursor}>_</span>
+      </div>
+      {consoleText && <div className={styles.consoleOutput}>{consoleText}</div>}
+    </>
+  );
+}
+
+const CreativePage = () => {
   const [consoleText, setConsoleText] = useState("");
   const [downloading, setDownloading] = useState(false);
 
@@ -31,6 +104,8 @@ const ResumeConsole = () => {
 
   return (
     <div className={styles.resumeConsoleWrap}>
+      {/* Monitor is now outside the console */}
+      <Monitor />
       <div className={styles.resumeConsole}>
         <div className={styles.consoleBar}>
           <span
@@ -46,23 +121,14 @@ const ResumeConsole = () => {
             style={{ background: "#27c93f" }}
           />
         </div>
-        <div className={styles.consoleBody}>
-          <span style={{ color: "#6ec1ff" }}>&gt; </span>
-          <button
-            className={styles.consoleBtn}
-            onClick={handleDownload}
-            disabled={downloading}
-          >
-            download_resume()
-          </button>
-          <span className={styles.consoleCursor}>_</span>
-        </div>
-        {consoleText && (
-          <div className={styles.consoleOutput}>{consoleText}</div>
-        )}
+        <ConsoleSection
+          handleDownload={handleDownload}
+          downloading={downloading}
+          consoleText={consoleText}
+        />
       </div>
     </div>
   );
 };
 
-export default ResumeConsole;
+export default CreativePage;

@@ -45,7 +45,6 @@ export default function Home() {
   }, []);
 
   if (!hasMounted) {
-    // Prevent any rendering until after hydration
     return null;
   }
 

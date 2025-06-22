@@ -25,7 +25,7 @@ const skills = [
   { name: "Linux", icon: "/skills/linux.png" },
 
   // Other
-  { name: "Machine Learning", icon: "/chakra.png" },
+  { name: "Tensorflow", icon: "/skills/tensorflow.png" },
 ];
 
 const creativeSkills = [
