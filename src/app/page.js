@@ -8,8 +8,26 @@ import Gallery from "./Gallery";
 import ProjectsSection from "./ProjectsSection";
 import SkillsSection from "./SkillsSection";
 import LoadingCaptcha from "./LoadingCaptcha";
-import ResumeConsole from "./ResumeConsole";
+import ResumeConsole from "./CreativePage";
 import ContactSection from "./ContactSection";
+import CreativePage from "./CreativePage";
+
+const imageUrls = [
+  "/anchor.svg",
+  "/arrow-12.svg",
+  "/cambg.png",
+  "/chakra.png",
+  "/haris.png",
+  "/pfp2.jpg",
+  "/portfolio_title.png",
+  "/screw.png",
+  "/wall_bg.png",
+  "projects/calcchat.png",
+  "projects/huepoint.png",
+  "projects/tharikida.png",
+  "projects/trek.png",
+  "projects/vizzko.png",
+];
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -25,7 +43,8 @@ export default function Home() {
         await font.load();
         document.fonts.add(font);
 
-        const imagePromises = ["/chakra.png", "/pfp2.jpg"].map((src) => {
+        // Preload all images
+        const imagePromises = imageUrls.map((src) => {
           return new Promise((resolve, reject) => {
             const img = new window.Image();
             img.src = src;
@@ -77,7 +96,7 @@ export default function Home() {
       />
       <AboutSection />
       <ProjectsSection />
-      <ResumeConsole />
+      <CreativePage />
       <SkillsSection />
       <ContactSection />
       {/* <Gallery /> */}

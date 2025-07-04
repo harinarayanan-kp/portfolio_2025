@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import styles from "./custom.module.css";
+import Image from "next/image";
 
 const Gallery = () => {
   const graphicdesign = [
@@ -159,17 +160,19 @@ const Gallery = () => {
           style={{ display: "flex", overflowX: "auto" }}
         >
           {graphicdesign.map((imageUrl, index) => (
-            <img
+            <Image
               key={index}
               src={imageUrl}
               alt={`Graphic Design ${index + 1}`}
+              width={200}
+              height={200}
               style={{
-                height: 200,
-                width: 200,
                 backgroundColor: "red",
                 margin: 10,
                 flexShrink: 0,
+                objectFit: "cover",
               }}
+              priority={index === 0}
             />
           ))}
         </div>
@@ -275,17 +278,19 @@ const Gallery = () => {
           style={{ display: "flex", overflowX: "auto" }}
         >
           {photographs.map((photoUrl, index) => (
-            <img
+            <Image
               key={index}
               src={photoUrl}
               alt={`Photography ${index + 1}`}
+              width={200}
+              height={200}
               style={{
-                height: 200,
-                width: 200,
                 backgroundColor: "blue",
                 margin: 10,
                 flexShrink: 0,
+                objectFit: "cover",
               }}
+              priority={index === 0}
             />
           ))}
         </div>

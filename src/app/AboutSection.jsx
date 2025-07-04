@@ -55,26 +55,19 @@ const AboutSection = () => {
               overflow: "hidden",
             }}
           >
-            <img
+            <Image
+              src="/pfp2.jpg"
+              alt="pfp"
+              width={160}
+              height={220}
               style={{
                 height: "100%",
+                width: "auto",
                 mixBlendMode: "multiply",
               }}
               draggable={false}
-              src="pfp2.jpg"
-              alt="pfp"
+              priority
             />
-            {/* <img
-              style={{
-                position: "absolute",
-                mixBlendMode: "darken",
-                width: "50%",
-                transform: "translate(-15%, -5%) rotate(-5deg)",
-              }}
-              draggable={false}
-              src="horn.jpeg"
-              alt=""
-            /> */}
           </div>
           <svg
             width="200"
@@ -106,6 +99,7 @@ const AboutSection = () => {
 
         <p
           style={{
+            padding: "20px",
             fontFamily: "Canda Tawa",
             fontSize: "2rem",
             margin: "10px",

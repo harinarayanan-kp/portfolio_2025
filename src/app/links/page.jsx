@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Image from "next/image";
 import "./links.css";
 
 const links = [
@@ -45,9 +46,23 @@ export default function LinksPage() {
     <div className="links-bg">
       <div className="links-container">
         <a href="/" className="links-home-btn" title="Go to Home">
-          <img src="/home.png" alt="Home" className="links-home-icon" />
+          <Image
+            src="/home.png"
+            alt="Home"
+            className="links-home-icon"
+            width={32}
+            height={32}
+            priority
+          />
         </a>
-        <img src="/pfp2.jpg" alt="Profile" className="links-profile" />
+        <Image
+          src="/pfp2.jpg"
+          alt="Profile"
+          className="links-profile"
+          width={120}
+          height={120}
+          priority
+        />
         <h2 className="links-title">Harinarayanan KP</h2>
         <div
           className="links-email"
@@ -94,7 +109,13 @@ export default function LinksPage() {
             rel="noopener noreferrer"
             className="links-btn"
           >
-            <img src={link.icon} alt={link.label} className="links-icon" />
+            <Image
+              src={link.icon}
+              alt={link.label}
+              className="links-icon"
+              width={32}
+              height={32}
+            />
             {link.label}
           </a>
         ))}
@@ -112,9 +133,11 @@ export default function LinksPage() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img
+          <Image
             src="https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black"
             alt="Buy Me a Coffee"
+            width={200}
+            height={40}
             style={{
               borderRadius: 0,
               boxShadow: "4px 4px 0px #111",

@@ -106,7 +106,11 @@ const HomeSection = () => {
             mixBlendMode: "difference",
           }}
         >
-          <img
+          <Image
+            src="/haris.png"
+            alt="Hari's"
+            fill
+            sizes="(max-width: 600px) 100vw, 200px"
             style={{
               width: "100%",
               height: "100%",
@@ -117,8 +121,7 @@ const HomeSection = () => {
               left: 0,
               objectFit: "contain",
             }}
-            src="/haris.png"
-            alt="Hari's"
+            priority
           />
           <div
             style={{

@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Image from "next/image";
 import styles from "./skills.module.css";
 
 const skills = [
@@ -42,7 +43,13 @@ const SkillsSection = () => (
     <div className={styles.skillsGrid}>
       {skills.map((skill) => (
         <div className={styles.skillCard} key={skill.name}>
-          <img src={skill.icon} alt={skill.name} className={styles.skillIcon} />
+          <Image
+            src={skill.icon}
+            alt={skill.name}
+            width={48}
+            height={48}
+            className={styles.skillIcon}
+          />
           <span className={styles.skillName}>{skill.name}</span>
         </div>
       ))}
@@ -51,7 +58,13 @@ const SkillsSection = () => (
     <div className={styles.skillsGrid}>
       {creativeSkills.map((skill) => (
         <div className={styles.skillCard} key={skill.name}>
-          <img src={skill.icon} alt={skill.name} className={styles.skillIcon} />
+          <Image
+            src={skill.icon}
+            alt={skill.name}
+            width={48}
+            height={48}
+            className={styles.skillIcon}
+          />
           <span className={styles.skillName}>{skill.name}</span>
         </div>
       ))}

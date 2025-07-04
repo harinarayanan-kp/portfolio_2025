@@ -1,0 +1,141 @@
+.animatedBG {
+  position: relative;
+  min-height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background: linear-gradient(120deg, #41658f 60%, #aa77b8 100%);
+}
+
+.animatedBG::before,
+.animatedBG::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.35;
+  filter: blur(18px);
+  z-index: 0;
+}
+
+.animatedBG::before {
+  width: 420px;
+  height: 420px;
+  top: -120px;
+  left: -120px;
+  background: radial-gradient(circle at 60% 40%, #aee2ff 0%, #e3f0ff 80%);
+  animation: floatBG1 8s ease-in-out infinite alternate;
+}
+
+.animatedBG::after {
+  width: 480px;
+  height: 480px;
+  bottom: -140px;
+  right: -140px;
+  background: radial-gradient(circle at 40% 60%, #f9e3ff 0%, #e3f0ff 80%);
+  animation: floatBG2 10s ease-in-out infinite alternate;
+}
+
+.animatedBG .shape {
+  position: absolute;
+  opacity: 0.18;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.animatedBG .triangle {
+  width: 120px;
+  height: 120px;
+  top: 10%;
+  left: 70%;
+  background: none;
+  border-left: 60px solid transparent;
+  border-right: 60px solid transparent;
+  border-bottom: 120px solid #b6d6ff;
+  animation: floatTriangle 7s ease-in-out infinite alternate;
+}
+
+.animatedBG .polygon {
+  width: 100px;
+  height: 100px;
+  bottom: 15%;
+  left: 15%;
+  background: repeating-linear-gradient(135deg, #f9e3ff, #e3f0ff 10px);
+  clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+  animation: floatPolygon 9s ease-in-out infinite alternate;
+}
+
+.animatedBG .line {
+  width: 180px;
+  height: 4px;
+  top: 60%;
+  right: 10%;
+  background: linear-gradient(90deg, #aee2ff, #f9e3ff);
+  border-radius: 2px;
+  animation: floatLine 6s ease-in-out infinite alternate;
+}
+
+.animatedBG .gradientOverlay {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.08) 0%,
+    rgba(174, 226, 255, 0.12) 100%
+  );
+  animation: moveGradient 12s linear infinite alternate;
+}
+
+@keyframes floatBG1 {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+  100% {
+    transform: translateY(40px) scale(1.08);
+  }
+}
+@keyframes floatBG2 {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+  100% {
+    transform: translateY(-40px) scale(1.05);
+  }
+}
+@keyframes floatTriangle {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-30px) rotate(8deg);
+  }
+}
+@keyframes floatPolygon {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+  100% {
+    transform: translateY(25px) scale(1.07);
+  }
+}
+@keyframes floatLine {
+  0% {
+    transform: translateX(0) rotate(-2deg);
+  }
+  100% {
+    transform: translateX(30px) rotate(6deg);
+  }
+}
+@keyframes moveGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+.animatedBG > * {
+  position: relative;
+  z-index: 1;
+}
